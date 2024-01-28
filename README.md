@@ -1,2 +1,2 @@
-# TP1_2196901
-Repo pour le travail pratique
+# cours-A61
+Préparation de la solution d'IA pour la mise en production
