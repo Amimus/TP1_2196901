@@ -9,8 +9,8 @@ from regression_model import __version__ as _version
 import logging
 
 
-#_logger = logging.getLogger(__name__)
-_logger = logging.getLogger("regression_model")
+_logger = logging.getLogger(__name__)
+
 
 def run_training() -> None:
     """Train the model."""
