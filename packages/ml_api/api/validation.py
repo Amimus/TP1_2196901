@@ -2,7 +2,7 @@ from marshmallow import Schema, fields
 from marshmallow import ValidationError
 
 import typing as t
-import json
+#import json
 
 
 class InvalidInputError(Exception):
@@ -14,8 +14,6 @@ SYNTAX_ERROR_FIELD_MAP = {
     '2ndFlrSF': 'SecondFlrSF',
     '3SsnPorch': 'ThreeSsnPortch'
 }
-
-
 class HouseDataRequestSchema(Schema):
     Alley = fields.Str(allow_none=True)
     BedroomAbvGr = fields.Integer()

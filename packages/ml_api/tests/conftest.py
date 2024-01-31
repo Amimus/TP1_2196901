@@ -1,6 +1,6 @@
 import pytest
-from ..api.app import create_app
-from ..api.config import TestingConfig
+from api.app import create_app
+from api.config import TestingConfig
 
 @pytest.fixture
 def app():
