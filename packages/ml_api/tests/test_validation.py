@@ -5,7 +5,7 @@ from regression_model.processing.data_management import load_dataset
 
 
 def test_prediction_endpoint_validation_200(flask_test_client):
-    # Given
+    # Givena
     # Load the test data from the regression_model package.
     # This is important as it makes it harder for the test
     # data versions to get confused by not spreading it
