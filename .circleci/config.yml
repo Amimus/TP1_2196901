@@ -1,7 +1,7 @@
 version: 2
 jobs:
   test_regression_model:
-    working_directory: ~/project
+    working_directory: ~/project/regression_model/regression_model
     docker:
       - image: cimg/python:3.8-node
     steps:
@@ -15,11 +15,10 @@ jobs:
             pip install --no-cache-dir -r packages/regression_model/requirements.txt
             chmod +x ./scripts/fetch_kaggle_dataset.sh
             ./scripts/fetch_kaggle_dataset.sh
-            PYTHONPATH=./packages/regression_model/regression_model/
             pytest -vv packages/regression_model/tests
 
   test_ml_api:
-    working_directory: ~/project
+    working_directory: ~/project/packages/ml_api
     docker:
       - image: cimg/python:3.8-node
     steps:
@@ -31,7 +30,6 @@ jobs:
             . venv/bin/activate
             pip install --upgrade pip
             pip install --no-cache-dir -r packages/ml_api/requirements.txt
-            PYTHONPATH=./packages/ml_api/
             py.test -vv packages/ml_api/tests
 
   train_and_upload_regression_model:
