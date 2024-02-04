@@ -1,10 +1,10 @@
 import logging
 
-from regression_model import config
+from regression_model.config import config as module_config
 from regression_model.config import logging_config
 
 
-VERSION_PATH = config.PACKAGE_ROOT / 'VERSION'
+VERSION_PATH = module_config.PACKAGE_ROOT / "VERSION"
 
 # Configure logger for use in package
 logger = logging.getLogger(__name__)
