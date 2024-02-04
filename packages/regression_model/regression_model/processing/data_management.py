@@ -1,5 +1,6 @@
 import pandas as pd
 import joblib
+import pathlib
 from sklearn.pipeline import Pipeline
 
 from regression_model.config import config
@@ -48,7 +49,8 @@ def remove_old_pipelines(*, files_to_keep) -> None:
     mapping between the package version and the model
     version to be imported and used by other applications.
     """
-
+    if not pathlib.Path(config.TRAINED_MODEL_DIR).exists():
+        return
     for model_file in config.TRAINED_MODEL_DIR.iterdir():
         if model_file.name not in [files_to_keep, "__init__.py"]:
             model_file.unlink()
