@@ -2,8 +2,9 @@ import pytest
 from pathlib import Path
 import sys
 
-path_root = Path(__file__).parents[1]
-sys.path.append(str(path_root))
+path_root = Path(__file__).parents
+for p in path_root :
+    sys.path.append(str(p))
 print(f' pathes : -- {path_root}')
 from api.app import create_app
 from api.config import TestingConfig
