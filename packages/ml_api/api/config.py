@@ -62,4 +62,3 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
-    DEBUG = True
