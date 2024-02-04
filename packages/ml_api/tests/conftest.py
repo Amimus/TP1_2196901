@@ -1,9 +1,12 @@
 import pytest
+from pathlib import Path
 import sys
-print(sys.path)
+
+path_root = Path(__file__).parents[2]
+sys.path.append(str(path_root))
+print(f' pathes : -- {sys.path}')
 from api.app import create_app
 from api.config import TestingConfig
-
 
 
 @pytest.fixture
