@@ -9,7 +9,7 @@ scikit-learn>=0.22.1,<0.23.0
 joblib>=0.14.1,<0.15.0
 
 # testing requirements
-pytest>=5.3.2,<6.0.0
+pytest
 
 # packaging
 setuptools>=41.4.0,<42.0.0
