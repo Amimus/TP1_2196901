@@ -1,7 +1,7 @@
 import logging
 
 from regression_model import config
-from regression_model import logging_config
+from regression_model.config import logging_config
 
 
 VERSION_PATH = config.PACKAGE_ROOT / 'VERSION'
