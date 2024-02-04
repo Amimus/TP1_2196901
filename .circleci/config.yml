@@ -15,6 +15,7 @@ jobs:
             pip install --no-cache-dir -r packages/regression_model/requirements.txt
             chmod +x ./scripts/fetch_kaggle_dataset.sh
             ./scripts/fetch_kaggle_dataset.sh
+            PYTHONPATH=.
             pytest -vv packages/regression_model/tests
 
   test_ml_api:
@@ -30,6 +31,7 @@ jobs:
             . venv/bin/activate
             pip install --upgrade pip
             pip install --no-cache-dir -r packages/ml_api/requirements.txt
+            PYTHONPATH=.
             py.test -vv packages/ml_api/tests
 
   train_and_upload_regression_model:
