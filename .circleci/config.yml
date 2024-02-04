@@ -1,7 +1,7 @@
 version: 2
 jobs:
   test_regression_model:
-    working_directory: ~/project
+    working_directory: ~/project/packages
     docker:
       - image: cimg/python:3.8-node
     steps:
@@ -18,7 +18,7 @@ jobs:
             pytest -vv packages/regression_model/tests
 
   test_ml_api:
-    working_directory: ~/project
+    working_directory: ~/project/packages
     docker:
       - image: cimg/python:3.8-node
     steps:
