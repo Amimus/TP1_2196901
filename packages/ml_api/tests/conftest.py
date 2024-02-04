@@ -1,7 +1,9 @@
 import pytest
-
+import sys
+print(sys.path)
 from api.app import create_app
 from api.config import TestingConfig
+
 
 
 @pytest.fixture
