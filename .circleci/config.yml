@@ -4,6 +4,8 @@ environment:
 jobs:
   test_regression_model:
     working_directory: ~/project
+    environment:
+      PYTHONPATH: ~/project/packages/regression_model/:~/project/packages/ml_api/:~/project/packages/regression_model/regression_model/config/:~/project/packages/regression_model/regression_model/
     docker:
       - image: cimg/python:3.8-node
     steps:
