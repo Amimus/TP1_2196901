@@ -1,6 +1,6 @@
 version: 2
 eenvironment:
-  PYTHONPATH: ~/project/packages/regression_model/:~/project/packages/ml_api/
+  PYTHONPATH: ~/project/packages/regression_model/:~/project/packages/ml_api/:~/project/packages/regression_model/config/
 jobs:
   test_regression_model:
     working_directory: ~/project
